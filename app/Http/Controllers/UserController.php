@@ -18,4 +18,10 @@ class UserController extends Controller
 
         return view('users.posts', compact('users'));
     }
+
+    public function roles() {
+        $users = User::with('roles')->get();
+
+        return view('users.roles', compact('users'));
+    }
 }

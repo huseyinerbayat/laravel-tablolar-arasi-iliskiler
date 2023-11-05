@@ -3,6 +3,7 @@
 use App\Http\Controllers\PhoneController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,6 @@ Route::get('/', function () {
 Route::get('/phones', [PhoneController::class, 'index']);
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/posts', [UserController::class, 'posts']);
+Route::get('/users/roles', [UserController::class, 'roles']);
 Route::get('/posts', [PostController::class, 'index']);
+Route::get('/roles', [RoleController::class, 'index']);

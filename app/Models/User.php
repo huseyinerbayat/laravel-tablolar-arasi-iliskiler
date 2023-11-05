@@ -59,4 +59,8 @@ class User extends Authenticatable
     public function oldestPost(): HasOne {
         return $this->hasOne(Post::class)->oldestOfMany();
     }
+
+    public function roles() {
+        return $this->belongsToMany(Role::class, 'user_role');
+    }
 }
